@@ -8,14 +8,6 @@ body {
   background-color: #2e2e2e;
 }
 
-h1 {
-  font-family: Qwigley;
-  font-size: 60px;
-  font-weight: 900;
-  text-align: center;
-  color: #2e2e2e;
-}
-
 p {
   color: #fff;
 }
@@ -80,7 +72,7 @@ button:active {
 .branco {
   height: 2px;
   border: none;
-  background: #676767;
+  background: #727272;
 }
 
 .preto {
@@ -89,12 +81,20 @@ button:active {
   background: #000;
 }
 
-.central {
+.bloco-1 {
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #ffd900;
   height: 300px;
+}
+
+.title {
+  font-family: Qwigley;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: #2e2e2e;
 }
 
 .central-direita {
@@ -109,19 +109,33 @@ button:active {
 }
 
 .bg-torcida {
-  background-image: url(img/teste.png);
+  background-image: url(img/torcida.png);
   background-repeat: no-repeat;
   padding: 13em;
   background-size: cover;
   background-position: center center;
+  display: flex;
+  flex-direction: row;
+}
+
+.texto-torcida {
+  position: absolute;
+  width: 400px;
+  color: #fff;
+  font-family: 'Roboto' sans-serif;
+  font-size: 15px;
+}
+
+.formulario {
+  display: flex;
 }
 
 .footer {
   width: 100%;
-  height: 130px;
+  height: 150px;
   display: flex;
   flex-direction: row;
   background-color: #000;
 }
 
-/*# sourceMappingURL=styles.css.map */
+
