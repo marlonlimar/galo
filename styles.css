@@ -21,52 +21,49 @@ h2 {
 }
 
 /* HEADER */
-.header {
+header {
   width: 100%;
   height: 80px;
+  background: #000;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #000;
-}
-
-.header img {
-  width: auto;
-  padding: 15px;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
-  
+  justify-content: space-between;
+  padding: 0 60px;
 }
 
-nav ul {
-  
+.escudos {
+  width: 130px;
 }
 
-nav ul li {
-  display: inline-block;
+.burger {
+  display: none;
 }
 
-nav ul li a {
-  font-size: 15px;
-  padding: 0px 30px;
-  transition: 0.1s;
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  display: block;
   color: #fff;
+  padding: 10px 25px;
+  transition: 0.1s;
 }
 
-li a:hover {
+.nav-bar ul li a:hover {
   color: #727272;
 }
 
-li a:active {
-  color: #5c4e00;
+.nav-bar ul li a.active {
+  color: #9e8600;
 }
 
+.nav-bar ul li a:active {
+  color: #9e8600;
+}
+
+
+/* BREAK LINES */
 .branco {
   height: 2px;
   border: none;
@@ -122,7 +119,7 @@ li a:active {
   background-position-y: center;
 }
 
-.yt-video {
+.video-side {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,7 +127,7 @@ li a:active {
   width: 50%;
 }
 
-.yt-video h2 {
+.video-side h2 {
   text-align: center;
   margin-bottom: 40px;
 }
@@ -153,3 +150,81 @@ li a:active {
 }
 
 
+/* BURGER MENU */
+.toggle-button {
+  position: absolute;
+  top: 1.9rem;
+  right: 1.6rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+@media only screen and (width < 1120px) {
+  header {
+    padding: 40px;
+  }
+}
+
+@media only screen and (width < 900px) {
+  header {
+    padding: 20px;
+  }
+}
+
+@media only screen and (width < 800px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .burger .line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 6px 0;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #000;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .nav-bar.active {
+    height: 410px;
+  }
+
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+
+}

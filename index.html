@@ -18,18 +18,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="header">
-        <img src="img/logo-atletico-mineiro-256.png" alt="">
-            <nav>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">CALENDÁRIO</a></li>
-                    <li><a href="#">CONSULADOS</a></li>
-                    <li><a href="#">TÍTULOS</a></li>
-                </ul>
-            </nav>
-        <img src="img/logo-retro.png" alt="">
-    </div>
+    <header>
+        <img class="escudos" src="img/escudos.png" alt="">
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">CALENDÁRIO</a></li>
+                <li><a href="#">CONSULADOS</a></li>
+                <li><a href="#">TÍTULOS</a></li>
+                <li><a href="#">SOBRE</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <hr class="branco">
     <hr class="preto">
@@ -47,13 +52,13 @@
     <!-- Box B -->
     <section class="bloco-2">
 
-        <div class="yt-video">
+        <div class="video-side">
             <h2>Últimas notícias do Galão da Massa!</h2>
             <iframe width="355" height="200" src="https://www.youtube.com/embed/mkMZP__LGJ8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         <div class="partidas">
-            <h2>Próxima Partida:</h2>
+            <h2>Próximo Jogo:</h2>
         </div>
 
     </section>
@@ -69,5 +74,7 @@
             
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
