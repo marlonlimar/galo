@@ -4,18 +4,30 @@ burger.onclick = function() {
     navbar.classList.toggle("active");
 }
 
-// fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=3&playlistId=UU0BhAOfmm1tJaJkPyTM9D_g&key=AIzaSyBrcwhZTG7spJKNYBGL7e7z1JjHQwPJoXs')
-// .then(res => {
-//     return res.json();
-// })
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
 
-// .then(data => {
-//   data.items.forEach((curr) => {
-//     var ifrm = document.createElement("iframe");
-//     ifrm.setAttribute("src", "https://www.youtube.com/embed?v="+curr.snippet.resourceId.videoId);
-//     ifrm.style.width = "400px";
-//     ifrm.style.height = "250px";
-//     document.querySelector(".videos").appendChild(ifrm);
-//     console.log("https://www.youtube.com/embed?v="+curr.snippet.resourceId.videoId) 
-//   });
-// })
+  if (getCookie("videoId")) {
+    var videoId = getCookie("videoId")
+    }else{
+        console.log('não existe')
+    }
+
+fetch('https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UC2m6OllE4QKxFJoXCKpbp9A&maxResults=1&order=date&key=AIzaSyDWEqbv0iHNqFYwmzQhUVOWQ7xYk_leoxE')
+.then((result)=>{
+    return result.json();
+}).then((data)=>{
+    let videos = data.items;
+    let videoId = videos[0].id.videoId;
+    let videoContainer = document.querySelector(".ultimo");
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube.com/embed/'+videoId;
+    iframe.title = videos[0].snippet.title;
+    iframe.width = '400px';
+    iframe.height = '226px';
+    videoContainer.appendChild(iframe);
+})
+

@@ -130,6 +130,7 @@ header {
   width: 380px;
   height: 25px;
   margin-top: 2px;
+  padding-left: 6px;
 }
 
 .botao-submit {
@@ -163,6 +164,11 @@ header {
 
 .videos h2 {
   margin-bottom: 8px;
+}
+
+iframe {
+  border-radius: 20px;
+  border: none;
 }
 
 
@@ -261,6 +267,36 @@ header {
 
   .nav-bar ul li a {
     margin-bottom: 12px;
+  }
+
+  .bloco-2 {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bloco-2 .receba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bloco-2 .receba h2 {
+    padding: 0 9px;
+    text-align: center;
+  }
+
+  .bloco-2 .receba input {
+    width: 300px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bloco-2 .videos h2 {
+    font-size: 19px;
   }
 
 }
