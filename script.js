@@ -16,7 +16,7 @@ function getCookie(name) {
         console.log('não existe')
     }
 
-fetch('https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UC2m6OllE4QKxFJoXCKpbp9A&maxResults=1&order=date&key=AIzaSyDWEqbv0iHNqFYwmzQhUVOWQ7xYk_leoxE')
+// fetch('https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UC2m6OllE4QKxFJoXCKpbp9A&maxResults=1&order=date&key=AIzaSyBrcwhZTG7spJKNYBGL7e7z1JjHQwPJoXs')
 .then((result)=>{
     return result.json();
 }).then((data)=>{
